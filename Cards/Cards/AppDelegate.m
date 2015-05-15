@@ -8,21 +8,50 @@
 
 #import "AppDelegate.h"
 #import "BoardViewController.h"
+#import "Reachability.h"
 
 @interface AppDelegate ()
+
+@property (nonatomic, strong) UILabel *internetConnectionLabel;
 
 @end
 
 @implementation AppDelegate
-
+@synthesize internetConnectionLabel = _internetConnectionLabel;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] ;
+    [self configureInternetLabel];
     BoardViewController *boardController = [[BoardViewController alloc] initWithNibName:@"BoardViewController" bundle:nil];
     UINavigationController *nav = [[UINavigationController alloc]  initWithRootViewController:boardController];
+    [nav.view addSubview:_internetConnectionLabel];
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
+    
+    Reachability * reach = [Reachability reachabilityWithHostname:@"www.google.com"];
+    reach.reachableBlock = ^(Reachability * reachability)
+    {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSLog(@"Internet connection good");
+            _internetConnectionLabel.hidden = YES;
+        });
+    };
+    
+    reach.unreachableBlock = ^(Reachability * reachability)
+    {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSLog(@"No Internet connection");
+            _internetConnectionLabel.hidden = NO;
+        });
+    };
+    
+    [reach startNotifier];
+    
+//    [[NSNotificationCenter defaultCenter] addObserver:self
+//                                             selector:@selector(reachabilityChanged:)
+//                                                 name:@"kReachabilityChangedNotification"
+//                                               object:nil];
     
     return YES;
 }
@@ -130,5 +159,31 @@
         }
     }
 }
+
+-(void)configureInternetLabel{
+    _internetConnectionLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 64, 320, 24)];
+    _internetConnectionLabel.backgroundColor = [UIColor colorWithRed:0.694 green:0.286 blue:0.6 alpha:1];
+    _internetConnectionLabel.textColor = [UIColor whiteColor];
+    _internetConnectionLabel.textAlignment = NSTextAlignmentCenter;
+    _internetConnectionLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:15];
+    _internetConnectionLabel.text = NSLocalizedString(@"No Internet connection",nil);
+    _internetConnectionLabel.hidden = YES;
+}
+
+//-(void)reachabilityChanged:(NSNotification*)note
+//{
+//    Reachability * reach = [note object];
+//    
+//    if([reach isReachable])
+//    {
+//        _internetConnectionLabel.hidden = YES;
+//        NSLog(@"Internet connection good");
+//    }
+//    else
+//    {
+//        _internetConnectionLabel.hidden = NO;
+//        NSLog(@"No internet connection");
+//    }
+//}
 
 @end

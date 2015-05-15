@@ -32,6 +32,7 @@
 		84A7C3601B038E9B00FC6A7A /* CardListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84A7C35E1B038E9B00FC6A7A /* CardListViewController.xib */; };
 		84A7C3641B049E3100FC6A7A /* CardDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A7C3621B049E3100FC6A7A /* CardDetailViewController.m */; };
 		84A7C3651B049E3100FC6A7A /* CardDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84A7C3631B049E3100FC6A7A /* CardDetailViewController.xib */; };
+		84A7C3691B05DE9F00FC6A7A /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A7C3681B05DE9F00FC6A7A /* Reachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,8 @@
 		84A7C3611B049E3100FC6A7A /* CardDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardDetailViewController.h; sourceTree = "<group>"; };
 		84A7C3621B049E3100FC6A7A /* CardDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardDetailViewController.m; sourceTree = "<group>"; };
 		84A7C3631B049E3100FC6A7A /* CardDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardDetailViewController.xib; sourceTree = "<group>"; };
+		84A7C3671B05DE9F00FC6A7A /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		84A7C3681B05DE9F00FC6A7A /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +138,8 @@
 		84A7C2F61B02001D00FC6A7A /* Cards */ = {
 			isa = PBXGroup;
 			children = (
+				84A7C3671B05DE9F00FC6A7A /* Reachability.h */,
+				84A7C3681B05DE9F00FC6A7A /* Reachability.m */,
 				84A7C3661B05CEF400FC6A7A /* ViewControllers */,
 				84A7C3591B038CF700FC6A7A /* images */,
 				84A7C3431B036DA700FC6A7A /* DataModels */,
@@ -355,6 +360,7 @@
 				84A7C33E1B020A3900FC6A7A /* AFNetworkActivityIndicatorManager.m in Sources */,
 				84A7C2FA1B02001D00FC6A7A /* main.m in Sources */,
 				84A7C33D1B020A3900FC6A7A /* AFJSONRequestOperation.m in Sources */,
+				84A7C3691B05DE9F00FC6A7A /* Reachability.m in Sources */,
 				84A7C3221B02051200FC6A7A /* LoadMethods.m in Sources */,
 				84A7C33F1B020A3900FC6A7A /* AFPropertyListRequestOperation.m in Sources */,
 				84A7C33A1B020A3900FC6A7A /* AFHTTPClient.m in Sources */,
