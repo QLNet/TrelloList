@@ -46,6 +46,8 @@ static LoadMethods *defMethods;
         lists(responseArray);
      
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSDictionary *dic = [NSDictionary dictionaryWithObject:@"error" forKey:@"error"];
+        ListDataModel *listModel = [[ListDataModel alloc] initWithDictionary:dic];
         NSLog(@"error: %@", operation.responseString);
         
     }];

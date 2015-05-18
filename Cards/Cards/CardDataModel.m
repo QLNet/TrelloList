@@ -16,16 +16,26 @@
 @synthesize idBoard = _idBoard;
 @synthesize idList = _idList;
 @synthesize description = _description;
+@synthesize error = _error;
+
+#define nilIfNull(p) ({typeof(p) _p=(p);_p==[NSNull null]?nil:_p;})
 
 -(id)initWithDictionary:(NSDictionary *)dic{
     self = [super init];
     if (self) {
-        self.card_id = [dic objectForKey:@"id"];
-        self.name = [dic objectForKey:@"name"];
-        self.description = [dic objectForKey:@"desc"];
-        self.idBoard = [dic objectForKey:@"idBoard"];
-        self.closed = [[dic objectForKey:@"closed"] boolValue];
-        self.idList = [dic objectForKey:@"idList"];
+        if ([dic isKindOfClass:[NSDictionary class]]) {
+            if ([dic objectForKey:@"error"]) {
+                self.error = @"error";
+            }
+            self.card_id = nilIfNull([dic objectForKey:@"id"]);
+            self.name = nilIfNull([dic objectForKey:@"name"]);
+            self.description = nilIfNull([dic objectForKey:@"desc"]);
+            self.idBoard = nilIfNull([dic objectForKey:@"idBoard"]);
+            self.closed = [[dic objectForKey:@"closed"] boolValue];
+            self.idList = nilIfNull([dic objectForKey:@"idList"]);
+        } else {
+            self.error = @"error";
+        }
         
     }
     
@@ -41,6 +51,7 @@
         self.idBoard = card.idBoard;
         self.closed = card.closed;
         self.idList = card.idList;
+        self.error = card.error;
     }
     
     return self;

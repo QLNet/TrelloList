@@ -14,6 +14,7 @@
 @property (nonatomic, strong) NSString *list_id;
 @property (nonatomic) NSInteger idBoard;
 @property (nonatomic) BOOL closed;
+@property (nonatomic,strong) NSString *error;
 
 -(id)initWithDictionary:(NSDictionary*)dic;
 -(id)initWithListDataModel:(ListDataModel*)list;

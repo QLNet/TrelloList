@@ -15,6 +15,7 @@
 @property (nonatomic, strong) NSString *description;
 @property (nonatomic, strong) NSString *idBoard;
 @property (nonatomic, strong) NSString *idList;
+@property (nonatomic,strong) NSString *error;
 @property (nonatomic) BOOL closed;
 
 -(id)initWithDictionary:(NSDictionary*)dic;
