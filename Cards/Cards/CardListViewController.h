@@ -11,6 +11,7 @@
 
 @interface CardListViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate>
 
+@property(nonatomic,weak) IBOutlet UITableView *tView;
 @property (nonatomic, strong) NSArray *cards;
 @property (nonatomic, strong) ListDataModel *listModel;
 

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		841BBCC61B09E97700F72EE6 /* ListDataModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 841BBCC51B09E97700F72EE6 /* ListDataModelTest.m */; };
 		841BBCC81B09F90C00F72EE6 /* CardDataModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 841BBCC71B09F90C00F72EE6 /* CardDataModelTest.m */; };
+		841BBCCA1B09FE4B00F72EE6 /* BoardViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 841BBCC91B09FE4B00F72EE6 /* BoardViewControllerTest.m */; };
+		841BBCCC1B0A021C00F72EE6 /* CardListViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 841BBCCB1B0A021C00F72EE6 /* CardListViewControllerTest.m */; };
 		84A7C2FA1B02001D00FC6A7A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A7C2F91B02001D00FC6A7A /* main.m */; };
 		84A7C2FD1B02001D00FC6A7A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A7C2FC1B02001D00FC6A7A /* AppDelegate.m */; };
 		84A7C3001B02001D00FC6A7A /* Cards.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84A7C2FE1B02001D00FC6A7A /* Cards.xcdatamodeld */; };
@@ -50,6 +52,8 @@
 /* Begin PBXFileReference section */
 		841BBCC51B09E97700F72EE6 /* ListDataModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListDataModelTest.m; sourceTree = "<group>"; };
 		841BBCC71B09F90C00F72EE6 /* CardDataModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardDataModelTest.m; sourceTree = "<group>"; };
+		841BBCC91B09FE4B00F72EE6 /* BoardViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardViewControllerTest.m; sourceTree = "<group>"; };
+		841BBCCB1B0A021C00F72EE6 /* CardListViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardListViewControllerTest.m; sourceTree = "<group>"; };
 		84A7C2F41B02001D00FC6A7A /* Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A7C2F81B02001D00FC6A7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84A7C2F91B02001D00FC6A7A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -177,6 +181,8 @@
 				841BBCC51B09E97700F72EE6 /* ListDataModelTest.m */,
 				841BBCC71B09F90C00F72EE6 /* CardDataModelTest.m */,
 				84A7C3141B02001D00FC6A7A /* Supporting Files */,
+				841BBCC91B09FE4B00F72EE6 /* BoardViewControllerTest.m */,
+				841BBCCB1B0A021C00F72EE6 /* CardListViewControllerTest.m */,
 			);
 			path = CardsTests;
 			sourceTree = "<group>";
@@ -380,8 +386,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				84A7C3171B02001D00FC6A7A /* CardsTests.m in Sources */,
+				841BBCCC1B0A021C00F72EE6 /* CardListViewControllerTest.m in Sources */,
 				841BBCC61B09E97700F72EE6 /* ListDataModelTest.m in Sources */,
 				841BBCC81B09F90C00F72EE6 /* CardDataModelTest.m in Sources */,
+				841BBCCA1B09FE4B00F72EE6 /* BoardViewControllerTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

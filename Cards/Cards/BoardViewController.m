@@ -13,7 +13,7 @@
 #import "CardDetailViewController.h"
 
 @interface BoardViewController ()
-@property(nonatomic,weak) IBOutlet UITableView *tView;
+
 @property(nonatomic,strong) NSArray* listArray;
 
 @end

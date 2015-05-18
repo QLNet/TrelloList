@@ -13,7 +13,6 @@
 
 @interface CardListViewController ()
 
-@property(nonatomic,weak) IBOutlet UITableView *tView;
 
 @end
 

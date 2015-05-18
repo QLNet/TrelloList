@@ -10,4 +10,6 @@
 
 @interface BoardViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 
+@property(nonatomic,weak) IBOutlet UITableView *tView;
+
 @end
